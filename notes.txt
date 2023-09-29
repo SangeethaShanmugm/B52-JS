@@ -5,3 +5,10 @@ ECMA Script5 => ES5
 ECMA Script6 => ES6
 
 upto ES13
+
+
+Frontend1 => static website
+html, css, javascript
+
+Frontend2 => dynamic webapps
+react
