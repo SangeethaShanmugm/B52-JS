@@ -57,3 +57,78 @@ function findSum(arr) {
 }
 
 console.log(findSum(arr))
+
+//reduce(callbackfunc(acc, curr), initalValue )
+
+const out = arr.reduce(function (acc, curr) {
+    acc = acc + curr
+    return acc
+}, 0)
+
+console.log(out)
+
+
+var arr = [5, 1, 3, 2, 6]
+
+function findMax(arr) {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+    }
+    return max
+}
+
+console.log(findMax(arr))
+
+
+var arr = [5, 1, 3, 2, 6]
+
+const max = arr.reduce(function (max, curr) {
+    // if (curr > max) {
+    //     max = curr
+    // }
+    //single line if else condition=> terinary operator => condition ? if true : if false
+    return (curr > max) ? curr : max
+}, 0)
+
+console.log(max)
+
+
+//array of objects
+
+const users = [
+    { firstName: "Harishri", lastName: "Dharmaraj", age: 20 },
+    { firstName: "Badrinath", lastName: "Nagarajan", age: 23 },
+    { firstName: "Gali", lastName: "Ravi", age: 25 },
+    { firstName: "Muthu", lastName: "Gowri", age: 20 }
+]
+
+
+//list of full name
+
+const userData = users.map((usr) => usr.firstName + " " + usr.lastName)
+
+console.log(userData)
+
+
+// {20: 2, 23: 1, 25: 1}
+
+const userData1 = users.reduce(function (acc, curr) {
+    if (acc[curr.age]) {
+        acc[curr.age] = ++acc[curr.age]
+    } else {
+        acc[curr.age] = 1
+    }
+    return acc
+
+}, {})
+console.log(userData1)
+
+
+//map + filter 
+
+const usersOutput = users.filter((usr) => usr.age > 20).map((usr) => usr.firstName)
+
+console.log(usersOutput)
