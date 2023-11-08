@@ -46,20 +46,20 @@ console.log(h3)
 // //this keyword => access property of an object
 
 
-// let firstName = "Harishri"
-// let lastName = "Dharmaraj"
+let firstName = "Harishri"
+let lastName = "Dharmaraj"
 
 
-// let sayHi = {
-//     firstName: "Richard",
-//     lastName: "Raja",
-//     welcome: function () {
-//         console.log(`say hi to ${firstName} ${lastName}`)
-//         return `say hi to ${this.firstName} ${this.lastName}`
-//     }
-// }
+let sayHi = {
+    firstName: "Richard",
+    lastName: "Raja",
+    welcome: function () {
+        console.log(`say hi to ${firstName} ${lastName}`)
+        return `say hi to ${this.firstName} ${this.lastName}`
+    }
+}
 
-// console.log(sayHi.welcome())
+console.log(sayHi.welcome())
 
 
 class Car {
