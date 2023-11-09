@@ -50,15 +50,20 @@ let [pig, cow, hen] = ["🐷", "🐮", "🐔"];
 console.log(pig, cow, hen)// 🐷 🐮 🐔
 
 //function definition
-function double(n) { //named export
+// export function double(n) { 
+//     return n * 2
+// }
+
+function double(n) {
     return n * 2
 }
 
 
-function msg() {
-    return "hello"
-}
+// export default function msg() { 
+//     return "hello"
+// }
 
 var greet = "welcome"
 
-export { double, msg, greet }
+// export { double, msg, greet } //named export
+export default double //default export

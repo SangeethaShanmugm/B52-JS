@@ -1,5 +1,6 @@
-import { double, msg } from "./object.js"//named import
-
+//import { double, msg, greet } from "./object.js"//named import
+import double from "./object.js"//default import
+import msg from "./msg.js"
 console.log(double(10))//fcuntion call
 
 console.log(msg())
